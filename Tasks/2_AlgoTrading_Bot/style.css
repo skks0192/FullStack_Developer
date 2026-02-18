@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(1, 29, 50);
+}
+.heading{
+    text-align: center;
+    font-size: 3rem;
+    padding: 40px;
+    font-weight: bolder;
+    color: aqua;
+    text-shadow: 2px 2px 3px white;
+    text-decoration: dotted underline;
+}
+.heading:hover{
+    color: azure;
+    text-shadow: 2px 2px 5px aqua;
+    text-decoration: dashed underline;
+    font-style:italic ;
+}
+.container{
+    height: 100px;
+    width: 50%;
+    background-color:rgba(1, 1, 1, 0.3);
+    backdrop-filter: blur(10px);
+    justify-self: center;
+    color: aqua;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 30px;
+    position: relative;
+    box-shadow: 4px 4px 6px rgb(233, 246, 246), -5px -5px 10px rgb(233, 246, 246);
+
+}
+#start{
+    border-radius: 10px;
+    color: rgb(13, 19, 19);
+    font-size: larger;
+    font-family: cursive;
+    background: #71e1e7;
+    font-weight: bolder;
+    box-shadow: 4px 4px 6px aqua;
+    transition: all 0.3s ease;
+}
+#start:hover{
+    background: white;
+    box-shadow: 4px 4px 6px rgb(233, 246, 246);
+    transform: translateY(-5px);
+}
+ table {
+    margin-top: 30px;
+      justify-self: center;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 4px 4px 6px rgb(123, 240, 240), -5px -5px 10px rgb(128, 238, 238);
+
+    }
+
+    th, td {
+      border: 3px solid rgb(14, 99, 92);
+      padding: 12px;
+      text-align: center;
+    }
+
+    .row-buy{
+        background-color: rgb(114, 255, 72);
+        color: black;
+        
+    }
+    .row-sell{
+        background-color: rgb(250, 60, 60);
+        color: black;
+    }
+    .row-hold{
+        background-color: rgb(255, 209, 58);
+        color: black;
+    }
+
+    th {
+      background-color: aqua;
+      font-size: 25px;
+    }
+
+    td {
+      font-size: 16px;
+      color: aqua;
+    }

@@ -1,0 +1,98 @@
+/* 🌌 Page setup */
+body {
+  background-color: #0b132b;
+  color: #e6eef8;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 40px;
+  overflow: hidden;
+}
+
+h1 {
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff;
+  margin-bottom: 30px;
+  text-decoration: underline;
+}
+
+/* Buttons layout */
+.btn-container {
+  display: grid;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto 20px;
+  gap: 12px;
+}
+
+.row-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.row-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  background-color: #1c2541;
+  color: white;
+  border: 1px solid #3a506b;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #00d4ff;
+  color: #0b132b;
+  transform: scale(1.05);
+}
+
+/* ✅ Fixed Output Box */
+#results {
+  background-color: #00140a;
+  color: #00ff88;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  text-align: left;
+  white-space: pre-wrap;
+  height: 220px; /* Fixed height */
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+  position: relative;
+}
+
+/* Typing caret */
+.caret {
+  display: inline-block;
+  width: 6px;
+  height: 1em;
+  background-color: #00ff88;
+  vertical-align: bottom;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Responsive buttons */
+@media (max-width: 768px) {
+  .row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .row-2 {
+    grid-template-columns: 1fr;
+  }
+  #results {
+    width: 90%;
+  }
+}

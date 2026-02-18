@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg{
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/G/31/img24/Media/Unrec/Live_PC_Hero_Lifestyle_3000x1200-m-2x._CB780065834_.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+
+}
+.container{
+    text-align: center;
+}
+.nav{
+    display: flex;
+    background: #07063d;
+    padding: 30px;
+    gap: 250px;
+}
+.product-container{
+    position: absolute;
+    left: 17%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 300px;
+}
+
+.card{
+    margin-top: 100px;
+    background-color: rgb(220, 255, 255);
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    justify-self:center ;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.card img{
+    height: 80px;
+    width: 100px;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+.card button{
+    margin: 20px;
+    background: #f8b930;
+    padding: 6px;
+}
+
+#searchbar{
+    width: 40%;
+    border-radius: 20px;
+    font-size: large;
+    padding: 10px;
+    box-shadow: 4px 4px 8px white, -4px -4px 8px white;
+}
+.items{
+    margin-top: 480px;
+    text-align: center;
+    background: #000;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 50px;
+    
+}
+.div{
+    display: none;
+}
+.cart-item span{
+     font-size: larger;
+     color: rgb(10, 69, 178);
+}
+
+.cart-item button{
+    background: #000;
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+}
+.cart-item button:hover{
+    background: white;
+    color: #000;
+}
+table{
+    text-align: center;
+    justify-self: center;
+    margin:20px;
+    color:white;
+}
+th{
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+    background: #000;
+    border-radius: 20px;
+    gap: 20px;
+}
+td{
+    padding: 20px;
+}
+footer{
+    text-align: center;
+    justify-items: center;
+    background: #07063d;
+    color: white;
+    padding: 20px;
+}
+
+
+

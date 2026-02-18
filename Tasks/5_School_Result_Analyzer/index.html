@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Result Analyzer</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #result{
+        justify-self: center;
+        margin: 100px;
+        background-color: #362f2f;
+        color: white;
+        padding: 30px;
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <h1 style="text-align: center;background: #62cf1f;height: 100px;font-size: 3rem;padding: 20px;">School Result Analyzer</h1>
+    <div id="result"></div>
+
+    <script>
+      const students =["Rahul","Priya","Aman","Rahul","Neha"];
+      const marks=[25,35,45,60,75];
+      
+    //1. indexOf() → Find the first occurrence of a student’s name in the class list.
+    let index = students.indexOf("Rahul");
+    document.getElementById("result").innerHTML = "<b><i>Students Name : </b></i>" +students + "<br><b><i>Marks of th student</i></b> : "+ marks +"<br><br><b><i>1. indexOf() Find the first occurrence of a student’s name in the class list:</b><br>  => First Rahul is at index </i> : <b><u>" + index;
+
+    //2. lastIndexOf() → Find the last occurrence of a student’s name (in case the name is repeated)
+    let lastindexOf = students.lastIndexOf("Rahul");
+    document.getElementById("result").innerHTML += "<br><br><b><i>2. lastIndexOf() Find the last occurrence of a student’s name (in case the name is repeated):</b><br>  => Last Rahul is at index  </i> : <b><u>" + lastindexOf;
+
+    //3. includes() → Check if a particular student is enrolled in the class.
+    let includes= students.includes("Neha");
+    document.getElementById("result").innerHTML += "<br><br><b><i>3. include()  Check if a particular student is enrolled in the class:</b><br>  => Neha is enrolled  </i> : <b><u>" + includes;
+ 
+    //4. find() → Find the first student who has passed the exam (marks > 40).
+     let find = marks.find((student,index)=>marks[index] > 40);
+     document.getElementById("result").innerHTML += "<br><br><b><i>34. find() Find the first student who has passed the exam (marks > 40):</b><br>  =>  First Student who has passed the Exam  </i> : <b><u>" + find;
+
+    //5. findIndex() → Get the position (index) of the first student who passed.
+    let findIndex = marks.findIndex(marks => marks > 40);
+    document.getElementById("result").innerHTML += "<br><br><b><i>5. findIndex() Get the position (index) of the first student who passed:</b><br>  =>   First passing student index   </i> : <b><u>" + findIndex;
+ 
+    //6. findLast() → Find the last student who scored above 50 marks.
+    let findLast = marks.findLast(marks=>marks > 50);
+    document.getElementById("result").innerHTML += "<br><br><b><i>6. findLast()  Find the last student who scored above 50 marks:</b><br>  => Last student scoring above 50 </i> : <b><u>" + findLast;
+
+    //7. findLastIndex() → Get the index of the last student who passed (marks > 40)
+    let findLastIndex = marks.findLastIndex(marks => marks >40);
+    document.getElementById("result").innerHTML += "<br><br><b><i>7. findLastIndex()   Get the index of the last student who passed (marks > 40).</b><br>  =>  Last passing student index </i> : <b><u>" + findLastIndex;
+
+
+    </script>
+</body>
+</html>

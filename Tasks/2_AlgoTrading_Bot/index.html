@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoTradingBot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="heading">AlgoTradingBot</div>
+
+   <div class="container">
+    <div class="state">
+     <h1>Balance</h1>
+     <div id="balance">1000</div>
+    </div>
+
+     <div class="state">
+     <h1>Current Price</h1>
+     <div id="price">100</div>
+     </div>
+
+     <div class="state">
+     <h1>Holding</h1>
+     <div id="holdings">0</div>
+     </div>
+
+     <button id="start">Start Simulation</button>
+     <!-- <ul id="results"></ul> -->
+   </div>
+
+   <table id="resultsTable" style="display:none; border-collapse: collapse;" border="1">
+       <thead>
+       <tr>
+        <th>Round</th>
+        <th>Price</th>
+        <th>Action</th>
+        <th>Balance</th>
+        <th>Holding</th>
+    </tr>
+</thead>
+<tbody id="resultsBody"></tbody>
+   </table>
+
+   
+<script src="script.js"></script>
+</body>
+</html>
+

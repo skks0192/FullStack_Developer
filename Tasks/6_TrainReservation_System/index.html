@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Train Reservation System</h1>
+
+    <div id="array-info"></div>
+    <div class="btn-container row-4">
+    <button onclick="PassengerList()">PassengerLists</button>
+    <button onclick="seniorList()">SeniorList</button>
+    <button onclick="upperCase_NameList()"> Uppercase Names</button>
+    <button onclick="totalAgeList()"> Total Age (Reduce)</button>
+    </div>
+    <div class="btn-container row-4">
+    <button onclick="totalAgeReverseList()">Total Age in Reverse (ReduceRight) </button>
+    <button onclick="adultsList()"> Check Adults</button>
+    <button onclick="minorsList()"> Check Minors</button>
+    <button onclick="stringList()"> Convert Seat Numbers </button>
+    </div>
+    <div class="btn-container row-2">
+    <button onclick="spreadList()">Add Extra Passengers (Spread) </button>
+    <button onclick="restList()"> Separate First Passenger (Rest) </button>
+    </div>
+    <div id="results" >All Results Should Appear Here:
+     <span id="typed"></span><span class="caret"></span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

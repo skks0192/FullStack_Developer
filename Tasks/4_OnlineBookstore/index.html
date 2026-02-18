@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online_BookStore_Array_Management</title>
+</head>
+<style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #result{
+        justify-self: center;
+        margin: 20px;
+        background-color: #d3a2dd;
+        border: 2px solid black;
+        padding: 30px;
+        border-radius: 20px;
+    }
+</style>
+<body>
+    <h2 style="text-align: center;background: #e19bdc;height: 100px;font-size: 3rem;padding: 20px;">Online BookStore Array Management</h2>
+    <div id="result"></div>
+
+    <script>
+        // 1 Start with an array of books: ['Math', 'Science', 'English'].
+        let books=[" Maths "," Science "," English "]
+        document.getElementById("result").innerHTML += "<i><b>1.step</b><br><b> BOOKS available</b> </i>:" + books ;
+        // 2 Add new books using push() and unshift().
+        books.push("Physics");
+        document.getElementById("result").innerHTML += "<br><br><i><b>2.step</b><br><b>Push() Method</b></i> :" + books;
+        books.unshift("Chemistry");
+        document.getElementById("result").innerHTML += "<br><i><b>UnShift() Method</b></i> :" + books;
+  
+        // 3 Remove books using pop() and shift().
+        books.pop();
+        document.getElementById("result").innerHTML += "<br><br><i><b>3.step</b><br><b>Pop() Method</b></i> :" + books;
+        books.shift();
+        document.getElementById("result").innerHTML += "<i><br><b>Pop() Method</b></i> :" + books;
+
+        // 4 Delete a specific book using splice(). remove + add + replace (aur original array badalta hai)
+        books.splice(2,2);
+        document.getElementById("result").innerHTML += "<br><br><i><b>4.step</b><br><b>Splice() Remove Method </b></i> :" + books;
+
+        // 5 Merge arrays of new arrivals using concat().
+        let merge=[" Biology "," Punjabi "," Hindi "," Moral Science "];
+        books=books.concat(merge);
+        document.getElementById("result").innerHTML += "<br><br><i><b>5.step</b><br><b>ConCat() Method</b></i> :" + books;
+
+       // 6 Copy a part of the book list inside the same array using copyWithin().
+       books.copyWithin(3,1);
+       document.getElementById("result").innerHTML += "<br><br><i><b>6.step</b><br><b>CopyWithin() Method</b></i> :" + books;
+
+      // 7 Flatten a nested array of categories using flat().
+        let nested=[[" Sanskrit ","Socialogy"],[" Human Values "," Communication "]];
+        let flat=nested.flat();
+        document.getElementById("result").innerHTML += "<br><br><i><b>7.step</b><br><b>flat() Method</b></i> :" + flat;
+
+      // 8 Use slice() to create a small section of books for display.
+      let display=[" Sanskrit ","Socialogy"," Human Values "," Communication "]
+      let slice=display.slice(1,3);
+      document.getElementById("result").innerHTML += "<br><br><i><b>8.step</b><br><b>Slice() Method</b></i> :" + slice;
+
+     // 9 Use toString() and join() to show the book list as a string with different separators.
+     let str = slice.toString();
+     document.getElementById("result").innerHTML += "<br><br><i><b>9.step</b><br><b>toString() Method</b></i> :" + str +"<br><b>TypeOf: <b> " + typeof str ;
+    
+    let join=flat.join("*");
+    document.getElementById("result").innerHTML += "<i><br><b>join() Method</b></i> :" + join;
+    
+    // 10 Find the total number of books using length.
+     let length=slice.length;
+     document.getElementById("result").innerHTML += "<br><br><i><b>10.step</b><br><b>Length() Method</b></i> :" + length;
+
+    //  11 Replace/update a book in the list by directly changing its index.
+      books[2]="GEOGRAPHY";
+      document.getElementById("result").innerHTML += "<br><br><i><b>11.step</b><br><b>Replace/Update Method</b></i> :" + books;
+    
+    // 12 Use forEach() to display all books with their positions.
+     books.forEach(function(books,index){
+     document.getElementById("result").innerHTML += "<br><br><i><b>12.step</b><b>forEach() Method</b></i> :"  + index + " " + books;
+     });
+
+    //  ======================================================DONE=============================================================
+    
+
+
+
+ 
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
