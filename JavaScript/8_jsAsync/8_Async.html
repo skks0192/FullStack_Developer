@@ -1,0 +1,34 @@
+<!--  what is async?
+  if u put async before a function -> it always gives u a promise
+  promise = "i,ll give u something in the future"
+  
+  async function ke aage lagta hai, aur wo function hamesha ek Promise return karta hai-->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+     <h2>javascript async</h2>
+    <p id="demo"></p>
+    <script>
+// ==================================================eg 1. =============================================
+        // async function sayhello(){
+        //     return "hello world";
+        // }
+        // console.log(sayhello()) // to check promise state
+        // sayhello().then(function(value){
+        //     document.getElementById("demo").innerHTML =value;
+        // });
+
+        // ==========================================eg 2.==============================================
+       async function hello(){
+          return "hello Welcome to Asycn function";
+        }
+        console.log(hello());
+        hello().then(msg => document.getElementById("demo").innerHTML=msg)
+    </script>
+  </body>
+  </html>

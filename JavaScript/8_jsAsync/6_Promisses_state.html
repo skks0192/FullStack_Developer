@@ -1,0 +1,76 @@
+<!-- what is a promise?
+ A promise is like a contract between you and javascript:
+        so a promise links both:
+        if success ->  resolves(call resolves)
+        if failure -> rejects(calls reject)
+        promisse states
+        A promise can be in 3 states:
+        1.pending -> still working
+        2.fullfilled -> finished successfully (resolve called)
+        3.rejected -> failed(rejected called) 
+        
+        
+        
+A Promise in JavaScript is an object used to handle asynchronous operations.
+It represents a value that will be available in the future — either success or failure.
+
+simple meaning:
+“A Promise predicts that something will happen later — either the operation succeeds and gives a value, or it fails and gives an error.”-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise State</title>
+</head>
+<body>
+    <h2>javascript Promises</h2>
+    <p id="demo"></p>
+    <script>
+     function mydisplayer(some){
+        document.getElementById("demo").innerHTML=some;
+     }
+// =========================================================eg 1.==================================================
+    //  create a Promise
+    // let myPromise=new Promise(function(myResolve,myReject){
+    //     let x=1;
+    //     if(x ===1){
+    //       myResolve("order placed"); //success
+    //     }
+    //     else{
+    //         myReject("order failed"); //failed
+    //     }
+    //     // myPromise= order placed;
+    //     console.log(myPromise);
+    // });
+
+    // myPromise.then(
+    //     function(value){mydisplayer(value);}, //success case
+    //     function(err){mydisplayer(err);},
+    //     console.log(myPromise)
+    // );
+
+    // =================================================eg 2.=======================================================
+
+    let myPromises= new Promise((resolved,rejected)=>{
+        let success=true;
+
+        if (success){
+            resolved("Data Received");
+        }
+        else{
+            rejected("Something Went Wrong");
+        }
+            console.log(myPromises);
+
+    });
+
+    myPromises
+    .then(result => mydisplayer(result)) //.then() ka kaam hota hai Promise ke successful result (resolve hone) ke baad code chalana
+    .catch(err => mydisplayer(err)); //.catch() ka kaam hota hai Promise ke fail hone (reject hone) par error handle karna.
+            console.log(myPromises);
+
+    </script>
+</body>
+</html>

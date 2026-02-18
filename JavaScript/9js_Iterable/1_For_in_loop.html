@@ -1,0 +1,30 @@
+<!-- Difference Between for ...in and for ...of
+ 
+|Loop Type | used for-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>for in loop example</h2>
+    <p id="demo1"></p>
+    <script>
+        const info={
+            name:"parteek",
+            age:22,
+            city:"chandigarh",
+        };
+
+        let text ="";
+        for(let key in info){
+            text += key + ":" + [key] + "<br>";
+        }
+
+        document.getElementById("demo1").innerHTML=text;
+    </script>
+</body>
+</html>

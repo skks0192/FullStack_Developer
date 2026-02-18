@@ -1,0 +1,25 @@
+<!-- ASychronous setTimeout (wait before running) 
+      “setTimeout function thodi der wait karta hai aur phir execute hota hai.”-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut</title>
+ </head>
+ <body>
+    <h2>ASychronous setTimeout</h2>
+    <p id="demo"></p>
+    <script>
+        function myfunction(){
+            document.getElementById("demo").innerHTML="ye jo puchte ho tum haal mera,agar bta du tumhe apne dil ka dard,sath rahoge kiya tum mere<br> tutti hui cheezo ko hath ni lgate kiya btate nh garhwale tere";
+        }
+        setTimeout(myfunction,3000);
+
+        function mySecondTurn(){
+            document.getElementById("demo").innerHTML="helllllloooooo";
+        }
+        setTimeout(mySecondTurn,4000);
+    </script>
+ </body>
+ </html>

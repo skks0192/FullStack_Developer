@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <h1>Array Methods Practice</h1>
+    <p id="demo"></p>
+    <script>
+        // 1.--------------------------------delete()------------------------
+        // Removes values but leaves empty hole (doesn't change length)
+        let arr=[10,20,30];
+        delete arr[1];
+        document.getElementById("demo").innerHTML=arr + "<br>Seat 2 is now empty:" + arr[1];
+
+
+        // 2.-------------------------------concat()-------------------------
+        // joins two or more array into a new one (merging)
+        const girls=["anita","sunita"];
+        const boys=["ravi","aman"];
+        const team=girls.concat(boys);
+        document.getElementById("demo").innerHTML="Final Team:" + team;
+
+        // 3.------------------------------copyWithin()---------------------
+        // copies inside the same array
+        const books=["history","maths","science","english"];
+        books.copyWithin(2,3); // 2 staring index kaha per krna hai copy,3 kon sa krna hai copy woh index(2nd index pe 3rd waala copy krna bs..)
+        document.getElementById("demo").innerHTML=books ;
+
+        // 4.-----------------------------length---------------------------
+        // length check krna element ke through not from index
+        const cars=["bmw","lembo","swift","nexa"];
+        document.getElementById("demo").innerHTML="Total cars:" + cars.length;
+
+        // 5.----------------------------join()----------------------------
+        // join() array ke saare elements ko ek single string me jod deta hai.unke beech me tum separator ( , - space ya kuch bhi) laga sakte ho.
+        const fruits=["apple","mango","kiwi"];
+        document.getElementById("demo").innerHTML="joins all the fruits: " + fruits.join("&");
+
+        // 6.---------------------------push()-----------------------------
+        // Adds an item to the end of an array
+        const num=[1,2,3,4,5];
+        num.push(6);
+        document.getElementById("demo").innerHTML=num;
+
+        // 7.---------------------------pop()-----------------------------
+        // Removes an item from end of an array
+        const numbs=[1,2,3,4,5];
+        numbs.pop();
+        document.getElementById("demo").innerHTML=numbs;
+
+        // 8.--------------------------shift()---------------------------
+        // removes an item from the starting of an element.
+        const number=[1,2,3,4,5];
+        number.shift();
+        document.getElementById("demo").innerHTML=number;
+
+        // 9.--------------------------unshift()-------------------------
+        // Adds an item from the start 
+        const numbers=[1,2,3,4,5];
+        numbers.unshift(0);
+        document.getElementById("demo").innerHTML=numbers;
+        
+        // 10.-------------------------at()-----------------------------
+        // The at() method returns the element at a specific index in an array. 
+        // It supports both positive (from start) and negative (from end) indexes.
+        const numm=[10,20,30,40,50];
+        let value=numm.at(-1);
+        document.getElementById("demo").innerHTML=value;
+
+        // 11.------------------------toString()-------------------------
+        // The toString() method converts the entire array into a single string,
+        // with each element separated by a comma ( , ). It doesn’t change the original array — it just returns the string version.
+        const convert=[10,20,30];
+        let con=convert.toString();
+        document.getElementById("demo").innerHTML=convert + (typeof con);
+
+        
+        // 12.------------------------Numeric sort()----------------------
+        // Default sort string ke hisab se hota hai, numeric ke liye compare function lagao:
+        let array= [8,4,2];              
+        array.sort((a,b) => a-b);
+        document.getElementById("demo").innerHTML=array;
+        // Compare 8 and 4 → 8 - 4 = 4 → positive → swap → [4, 8, 2]
+        // Compare 8 and 2 → 8 - 2 = 6 → positive → swap → [4, 2, 8]
+        // Compare 4 and 2 → 4 - 2 = 2 → positive → swap → [2, 4, 8]
+        // Final sorted array: [2, 4, 8]
+        
+        // 13.--------------------------flat()---------------------------
+        // Nested array (andar array ke andar array) ko seedha (flat) bana deta hai.it converts multi-level array into a sigle level.
+        // Matlab: andar ke arrays ko tod kar ek simple array bana deta hai. 
+        const boxes=[[1,2],[3,4],[5,6]];
+        let flat=boxes.flat();
+        document.getElementById("demo").innerHTML = flat;
+
+        // 14.--------------------------flatMap()---------------------------
+        // flatMap() ek hi time pe do kaam karta hai: pehle map() lagata hai (har element par kuch operation karta hai).fir flat() lagata hai (array ko ek level tak seedha kar deta hai).
+        const nums=[1,2,3];
+        const flatMap=nums.flatMap(x => [x,x*10]);
+        document.getElementById("demo").innerHTML = flatMap;
+
+        // 15.--------------------------splice()---------------------------
+        // iska kaam hai remove,add,ja replace krna 
+        const fruit =["apple","mango","orange","grapes"];
+        fruit.splice(1,0,"gauava"); //adding
+        document.getElementById("demo").innerHTML = fruit;
+        fruit.splice(2,2);//removing
+        document.getElementById("demo").innerHTML = fruit;
+
+        // 16.--------------------------tospliced()---------------------------
+        // same as splice but it gives a new array....
+        const months=["jan","feb","march","April","may"];
+        months.toSpliced(2,0,"june");
+        document.getElementById("demo").innerHTML = months;
+
+        // 17.--------------------------slice()---------------------------
+        //slice() ka kaam hai array ka ek portion (part) nikalna aur naya array return karna — bina original array badle.  
+        //  Syntax
+            // array.slice(start, end)
+            // start → The index where the copy begins (included).
+            // end → The index where the copy ends (not included).
+            // If end is not given, it slices till the end of array.
+            // Indexing starts from 0.
+            const players=["virat","dhoni","hardik","rhoit"];
+            const slice=players.slice(2,4); //copies from index 2 
+            document.getElementById("demo").innerHTML = slice;
+
+        // 18.--------------------------Automatic toString() Conversion---------------------------
+        // Jab JavaScript me string + kuch bhi hota hai → wo automatically toString() laga kar sabko string bana deti hai.
+        const fruitss=["apple","mango","banana"];
+        let str=fruitss.toString();
+        document.getElementById("demo").innerHTML=str;
+        console.log(typeof(str));
+
+        // 19.--------------------------indexOf()---------------------------
+            // The indexOf() method searches for a specific element in an array (or a substring in a string)
+            // and returns the index (position) of its first occurrence.
+            // If it’s not found, it returns -1.
+        const fruitts=["apple","mango","apple","banana"];
+        const index= fruitts.indexOf("mango",0);
+        document.getElementById("demo").innerHTML=index;
+
+        // 20.--------------------------lastIndexOf()---------------------------
+        // Finds the last position of an element in an array.
+        const fruiits=["apple","mango","apple","banana"];
+        const position=fruiits.lastIndexOf("apple");
+        document.getElementById("demo").innerHTML=position;
+
+        // 21.--------------------------includes()---------------------------
+        // checks if an element exist in the array. return true/false
+        isPresent=fruiits.includes("banana");
+        document.getElementById("demo").innerHTML=isPresent;
+
+        // 22.--------------------------find()---------------------------
+        // returns the first value that passes the specific condition
+        const age =[12,13,25,15,20,21];
+        let adult=age.find(age => age >18);
+        document.getElementById("demo").innerHTML=adult;
+
+        // 23.--------------------------findIndex()---------------------------
+        // Returns the index of the first element that passes a test.
+        // Syntax
+        // array.findIndex(callback)
+        // callback → function with 3 arguments (value, index, array).
+        let findindex=age.findIndex(age => age >18);
+        document.getElementById("demo").innerHTML=findindex;
+
+        // 24.--------------------------findLast()---------------------------
+        let findlast=age.findLast(age => age >18);
+        document.getElementById("demo").innerHTML=findlast;
+
+        // 25.--------------------------findLastIndex()---------------------------
+        // The findLastIndex() method checks every element in an array from right to left
+        // and returns the index of the last element that matches the given condition.
+        // If no element matches, it returns -1.
+        let findlastindex=age.findLastIndex(age => age >18);
+        document.getElementById("demo").innerHTML=findlastindex;
+
+        // 26.--------------------------sort()---------------------------
+        // The sort() method is used to arrange (sort) the elements of an array —
+        // by default, it sorts them as strings (in alphabetical order).
+        // It also changes the original array.
+        let sorting=age.sort();
+        document.getElementById("demo").innerHTML=sorting;
+
+        // 27.--------------------------reverse()---------------------------
+        // reverse() reverses the order of the elements in the same array —
+        // it changes (mutates) the original array.
+        let reversing=age.reverse();
+        document.getElementById("demo").innerHTML=reversing;
+
+        // 28.--------------------------toReversed()---------------------------
+        // toReversed() does the same thing — it reverses the array —
+        // but it does not change the original array.
+        // It returns a new reversed copy instead.
+        let reversed=age.toReversed();
+        document.getElementById("demo").innerHTML=reversed;
+
+        // 29.--------------------------toSorted()---------------------------
+        // toSorted() creates a new sorted copy of an array
+        // without changing the original one.
+        // It works just like sort(), but safer — because sort() changes your original array.
+        let sorted=age.toSorted();
+        document.getElementById("demo").innerHTML=sorted;
+
+        // 30.--------------------------Random sort()---------------------------
+        // It randomly shuffles the array elements by sorting them using random positive or negative values returned from Math.random() - 0.5.
+        let random = age.sort(()=> 0.5 - Math.random());
+        document.getElementById("demo").innerHTML=random;
+
+        // 31.--------------------------Math.min_max()---------------------------
+        // Math.min() returns the smallest value, and Math.max() returns the largest value from given numbers (or from an array using ...).
+        const numberss =[2,4,7,10];
+        document.getElementById("demo").innerHTML=Math.min(...numberss);
+        document.getElementById("demo").innerHTML=Math.max(...numberss);
+
+        // 32.--------------------------Sorting Object Arrays()---------------------------problem=========================================================
+        // Sort objects by property (like year or name).
+        const Cars=[
+            {type:"Volvo",year:2016,},
+            {type:"BMW",year:2010,},
+            {type:"Porche",year:2001,},
+        ];
+        let objectSort=Cars.sort((a,b) => a.year - b.year);
+        document.getElementById("demo").innerHTML= "Cars Sorted by Year :<br>" +objectSort.map(c=> c.type + " " +c.year).join(",");
+
+        // 33.--------------------------forEach()---------------------------
+        // forEach() ek array method hai jo array ke har element par ek function chalata hai. Ye basically loop ki tarah kaam karta hai — par thoda easy aur short way me.
+        const student =["aman","riya","karan"];
+        let msg="";
+        student.forEach(function(name, index){
+            msg +="hello "+name+" (roll no.: "+(index+1)+ ")<br>"; 
+        });
+        document.getElementById("demo").innerHTML=msg;
+
+        // 34.--------------------------map()---------------------------
+        // map jo hai har ek element pe function run karega aur ek naya array dega.
+        const marks=[50,60,70];
+        const bonusMarks=marks.map(m => m+10);
+        document.getElementById("demo").innerHTML="original marks :"+marks +"<br> bonous marks: "+bonusMarks;
+         
+        // 35.--------------------------filer()---------------------------
+        // filter() ek array method hai jo har element par ek test (condition) chalata hai aur sirf un elements ko return karta hai jo test pass karte hain.
+        const markss=[40,50,60,70,80,90,100];
+        let filter=markss.filter(m => m>60);
+        document.getElementById("demo").innerHTML=filter;
+
+        // 36.--------------------------reduce()---------------------------
+        // reduce() ek array method hai jo array ke saare elements ko combine karke ek single value return karta hai.   
+        const prices=[100,200,50];
+        let total=prices.reduce((sum,price)=>sum+price,0); //sum=> previous value 0, price =>current value 100;
+        document.getElementById("demo").innerHTML="total bill : " + total;
+
+        // 37.--------------------------reduceRight()---------------------------
+        // reduceRight() almost same hai jaise reduce() — bas difference ye hai ki ye array ko right se left (ulta) process karta hai.
+        const word=["World","My","hello"];
+        const sentence=word.reduceRight((a,b)=> a+" "+b);
+        document.getElementById("demo").innerHTML=sentence;
+
+        // 38.--------------------------every()---------------------------
+        //checks if all elements pass a test . returns true/false.
+        // The every() method checks if all elements in an array pass a given condition.
+        // If every element passes → returns true,
+        // if even one fails → returns false.
+        const ages =[18,18,25,30];
+        let allAdults=ages.every(a => a =>18);
+        document.getElementById("demo").innerHTML=allAdults;
+
+        // 39.--------------------------some()---------------------------
+        // The some() method checks if at least one element in the array passes the condition.
+        // If one or more pass → returns true,
+        // if none pass → returns false.
+        let some=ages.some(a => a<18);
+        document.getElementById("demo").innerHTML=some;
+
+        // 40.--------------------------Array.from()---------------------------
+        // Array.from() kisi bhi string, set, ya NodeList ko ek proper array bana deta hai.
+        let words="HELLOO";
+        let letters=Array.from(words);
+        document.getElementById("demo").innerHTML=letters;
+
+        // 41.--------------------------spread(...)---------------------------
+        // Spread operator (...) ka use hum array ya object ke elements ko “spread” (yaani tod kar) alag-alag karne ke liye karte hain.
+        const arr1=[1,2,3];
+        const arr2=[4,5,6];
+        const merged=[...arr1,...arr2];
+        document.getElementById("demo").innerHTML=merged;
+
+        // 42.--------------------------rest(...)---------------------------
+        // Rest (...) operator multiple values ko collect karke ek single array ya object me store karta hai.
+        // Simple line me:
+        // Spread cheezein todta hai, Rest cheezein jodta hai.
+        const arrr=[1,2,3,4,5];
+        const [a, ...rest]=arrr;
+        document.getElementById("demo").innerHTML="first :" + a +"<br>Rest : " + arrr;
+
+
+
+
+
+        </script>
+</body>
+</html>

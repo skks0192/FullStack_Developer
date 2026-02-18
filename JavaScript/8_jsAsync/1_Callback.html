@@ -1,0 +1,42 @@
+<!-- what is callback ? 
+     A callback is just a function that you pass into another  function.
+     the main function then calls it later when its own work is done.
+
+     ✅ Callback Function
+        👉 haan, ye ek function hai jise hum dusre function ke andar argument ke form me pass karte hain, taaki wo baad me call ho.
+        💬 short me:
+        “Callback ek function hai jo kisi doosre function ke andar tab execute hota hai jab uska kaam complete ho jaata hai.”
+   -->
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>callback function</title>
+     </head>
+     <body>
+        <script>
+            // ===============================================================//eg 1.===========================================
+            function sayHello(callback){
+                console.log("helloooooo!");
+                callback();
+            }
+            function sayGoodbye(){
+                console.log("Goodbyee yaar!");
+            }
+            sayHello(sayGoodbye);
+ 
+            // ================================================================//eg 2.==========================================
+            function add(a,b,callback){
+                console.log(a+b);
+                callback(a,b);
+            }
+            function subtract(a,b){
+                console.log(a-b);
+            }
+            add(2,3,subtract);
+            
+
+        </script>
+     </body>
+     </html>

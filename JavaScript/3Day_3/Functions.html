@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    
+    <script>
+        
+    //    --------------------------------------- // Q1: What is a Function?
+// A function in JavaScript is a block of reusable code that is used to perform a specific task.
+// It executes only when it is called (invoked) and can take inputs (parameters) and optionally return an output (value).
+
+// 1️⃣ Function Declaration (Basic Syntax)
+                            // function functionName() {
+                            //   // code to execute
+                            // }
+                            // Call karne ke liye:
+                            //  functionName();
+
+                            //eg1.
+                            //  function greeting(){
+                            //     console.log("Hello sunaina how are u?");
+                            //  }
+                            //  greeting();//call the function     
+                            
+
+// 2️⃣ Function with Parameters (Inputs)
+// Parameters = function ke andar input values.
+// Jab function call hota hai, hum arguments pass karte hain.
+
+                            //eg. 
+                            // function details(name,age){ //function with parameters
+                            //     console.log("My name is" + " " + name+ "," + " " + "and my age is" + " " +age+" "+"years old");
+                            // }
+
+                            // details("Sunaina", 22); // function call with arguments
+
+// 3️⃣ Function with Return (Output dena)
+// Function kuch calculate kare aur result wapas de — use return keyword.
+                            //eg.
+                            // function add(a,b){
+                            //     return a+b;
+                            // }
+                            // let result = add(5,10);
+                            // console.log("the sum :" ,result);
+
+// 4️⃣ Multiple Parameters
+// Function ek se zyada input bhi le sakta hai.
+
+                            //eg. 
+                            // function multiply(a, b, c) {
+                            //   return a * b * c;
+                            // }
+                            //  console.log(multiply(2, 3, 4)); 
+
+// 5️⃣ Default Parameters
+// Agar user value na de, to ek default value use ho jaye.
+                            //eg.
+                            // function greet(name = "Guest") {
+                            //   console.log("Welcome " + name + "!");
+                            // }
+
+                            // greet("Sunaina"); // Welcome Sunaina!
+                            // greet();          // Welcome Guest!   
+
+// 6️⃣ Function Expression
+// Function ko variable me store kar sakte ho.
+// (Ye bhi ek function hi hota hai, bas assigned form me.)
+                            
+                            //eg.
+                            // const square = function(num) {
+                            //   return num * num;
+                            // };
+                            // console.log(square(4)); // 16
+
+                            // 💬 Yahaan square ek variable hai jisme anonymous function (no name) store hai.      
+                            
+// 7️⃣ Arrow Functions (Modern ES6 Syntax) 
+// Short aur clean syntax — arrow (=>) ka use hota hai.
+
+                            // Eg.
+                            // const add = (a, b) => {
+                            // return a + b;
+                            // };
+                            // console.log(add(3, 5)); 
+
+                            // 💬 Agar function me sirf ek hi line return hai,
+                            // to {} aur return dono hata sakte ho 
+                            // const add = (a, b) => a + b;
+                            // console.log(add(4, 6)); 
+
+// 8️⃣ Function without Parameters
+// Kabhi function ko input ki zarurat nahi hoti.
+                            //eg.
+                            // function sayHello() {
+                            //   console.log("Hello there!");
+                            // }
+                            // sayHello(); // runs directly
+
+// 9️⃣ Function Calling Another Function
+// Ek function ke andar doosra function bhi call kar sakte ho (nesting).
+
+                            //eg.
+                            // function square(n){
+                            //     return n*n;
+                            // }
+                            // function printSqaure(num){
+                            //     console.log("print Sqaure "+num+ ":"+square(num));
+                            // }
+                            // printSqaure(5);
+
+// ---------------------------------------------------// Ways a Function Can Be Invoked
+// 1. Called from JavaScript code
+// Like dialing a number on your phone 📱 to make a call.
+// function greet() {
+//   console.log("Hello, welcome!");
+// }
+// greet();  // Function is invoked here
+
+// 2. Invoked by an Event (user action)
+// Like pressing a button on a remote 📺 – only works when the button is clicked.
+// function sayHi() {
+//   alert("Hi, you clicked the button!");
+// }
+// <button onclick="sayHi()">Click Me</button>
+
+// 3. Self-Invoked (runs automatically)
+// Like a microwave with auto-start – it begins as soon as you close the door.
+// (function () {
+//   console.log("I run automatically!");
+// })();
+
+console.log(this);
+
+
+    </script>
+</body>
+</html>

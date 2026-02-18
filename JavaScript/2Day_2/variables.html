@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Variables</h1>
+
+<p>The underscore is treated as a letter in JavaScript names.</p>
+
+<p id="demo"></p>
+
+<script>
+//Variables in JS.
+
+//let sugar = "Sweet Sugar"; 
+//console.log(sugar); // Output: Sweet Sugar
+
+//How to Declare Variables in JavaScript :- There are 4 ways:
+//(a) Automatic Declaration
+//JavaScript automatically creates a variable if you don’t declare it.
+//But 👉 this is not good practice.
+// x = 5;
+// y = 6;
+// z = x + y;
+// console.log(z); 
+//💡 Real-life analogy: Writing notes without labeling them — later, you might forget what they mean. That’s why always declare properly.
+
+
+// (b) Using var (Old Way)
+
+// var x = 5;
+// var y = 6;
+// var x = 10;
+// var z = x + y;
+// console.log(z); // 11
+ 
+ // 10
+
+// console.log(z); // 11
+
+// -> var was used in old JavaScript (before 2015).
+
+// -> It works but has some issues, so now we mostly use let and const.
+
+
+// (c) Using let (Modern Way)
+
+// let x = 5;
+// let y = 6;
+// let z = x + y;
+// console.log(z); // 11
+
+// -> Use let when the value can change later.
+
+// 💡 Example:
+
+//   let age = 20;
+//  age = 21; // now the value is updated
+//  console.log(age); // 21
+
+// (d) Using const (Constant Value)
+
+// const pi = 3.14;
+
+// -> Use const when the value should not change.
+
+// const myName = "Manish";
+// myName = "Ravi"; //❌ Error! (cannot change)
+// console.log(myName);
+//✔️ Rule: Always use const first, use let only if the value needs to change. Use var only for old browsers.
+
+// 3. Variables in Algebra vs JavaScript
+
+// Just like in Math,
+
+// let x = 5;
+// let y = 6;
+// let z = x + y; // z = 11
+
+// 4. Identifiers (Variable Names)
+
+// Rules for naming:
+
+// 1. Can contain letters, digits, _, and $
+
+// 2. Must begin with a letter, _ or $ (not a number)
+
+// 3. Case-sensitive (carName ≠ CarName)
+//  let carName = "Mustang";
+//  Carname = "Mustang Shelby";
+//  console.log(carName) // Mustang
+//  console.log(Carname) // Mustang Shelby
+ 
+// 4. Cannot use reserved keywords (like let, class, return)
+
+// let age = 20;
+// let _price = 100;
+// let $money = 500;
+
+// ❌ Invalid Example:
+
+// let 1car = "Volvo"; // Error (cannot start with number)
+
+// 5. Assignment Operator (=)
+
+// In JavaScript, = means assign value (not equal to like in math).
+
+// let x = 5;
+// x = x + 3; // Now x becomes 8
+
+// 💡 Example:
+// Imagine you had ₹5 in your wallet.
+// Then you got ₹3 more.
+// Now your wallet has ₹8.
+
+// 6. Data Types in Variables
+
+// Variables can store different types of data:
+
+// const pi = 3.14;        // Number
+// let name = "John Doe";  // String (text)
+// let answer = 'Yes!';    // String with single quotes
+
+// 👉 Rule: Numbers are written without quotes, Strings are written with quotes.
+
+// 💡 Example:
+
+// let age = 25; → Age is a number.
+
+// let city = "Delhi"; → City is text.
+
+// 7. Declaring Variables
+
+// You can declare first, then assign later:
+
+// let carName;
+// carName = "Volvo";
+
+// Or declare and assign together:
+
+// let carName = "Volvo";
+
+// 💡 Example:
+
+// Empty glass first (declare) → then pour water later (assign).
+
+// 8. Multiple Variables in One Line
+
+// let person = "John Doe", carName = "Volvo", price = 200;
+
+//Or in multiple lines:
+
+// let person = "John Doe",
+//     carName = "Volvo",
+//     price = 200;
+
+// 9. Undefined Value
+
+// If you declare but don’t assign, the value is undefined.
+
+
+//  let carName;
+//  console.log(carName); // undefined
+
+// 💡 Example:
+// Like having an empty jar with a label but nothing inside yet.
+
+// 10. Re-declaring Variables
+
+// -> With var → you can re-declare, no issue:
+// var car = "Volvo";
+// var car; // Still "Volvo"
+
+//With let and const → ❌ Cannot re-declare:
+
+// let car = "Volvo";
+// let car; // Error
+
+// 11. Arithmetic with Variables
+
+// You can do math operations:
+
+// let x = 5 + 2 + 3; // 10
+
+// But if you use strings, it joins (concatenates):
+
+// let x = "John" + " " + "Doe"; // John Doe
+
+// Be careful:
+
+// let x = "5" + 2 + 3; // "523" (string concatenation)
+// let y = 2 + 3 + "5"; // "55" (because first numbers add, then string)
+
+// 12. $ and _ in Variable Names
+
+// ✔️ Both $ and _ are allowed in names.
+
+// let $money = 100;
+// let _hiddenValue = 500;
+
+// $ is often used in jQuery (a JavaScript library).
+// Example: $("p") means select all <p> elements in HTML.
+
+// _ is often used by programmers for private/hidden variables.
+
+// 💡 Example: Like writing _secretNote in your notebook so others know it’s private.
+
+// let _secret = undefined;
+// console.log(typeof _secret); // undefined
+// let _price = null ;
+// console.log(typeof _price); // object
+
+// let car=null;
+// console.log(car);
+// console.log(typeof car);
+
+// Mini Practice Task:
+
+// Har ek primitive type ka ek example likh aur typeof se check kar
+// let name="sunaina";
+// let age=21;
+// let isStudent=true;
+// let x;
+// let y=null;
+// let big=123456789098765432n;
+// let sym=Symbol("id")
+
+// console.log(typeof name);
+// console.log(typeof age);
+// console.log(typeof isStudent);
+// console.log(typeof x);
+// console.log(typeof y);
+// console.log(typeof big);
+// console.log(typeof sym);
+
+// Ek object aur ek array banao
+// let person={
+//     name:"sunaina",
+//     age:21,
+//     country:"india",
+//     mobile:123456789,
+// }
+// console.log(person);
+
+// let arr=["apple","banana","mango"];
+// console.log(arr);
+
+// Ek array ko dusre variable me assign karo aur check karo dono change hote hain ya nahi
+// let arr1=["apple","banana","mango"];
+// let arr2=arr1;
+// arr2.push("gauva");
+// console.log(arr2);
+
+
+// let a=10;
+// let b=30;
+
+// console.log("addition:", a+b);
+// console.log("subtraction:", a-b);
+// console.log("multiplication:", a*b);
+// console.log("division:", a/b);
+
+// console.log(5=="5");
+// console.log(5==="5");
+
+// let marks=30;
+// let result=(marks>=40)? "pass" : "fail";
+// console.log(result);
+
+// let x=5;
+// // x=8;
+// console.log(x++); //5 print 1 add krega =6 total
+// console.log(++x); //6+1=7 increase first print 7
+
+// let a=10;
+// console.log(a++);//10 print hua baad main 1 se increase hoga 11 total
+// console.log(++a);//1+11=12 
+// console.log(a);//12
+
+// let x=5,y=10;
+// let z=x++ + ++y; //z=5 print then +1, 5+1=6 + 11 ,5 +11
+// console.log(x,y,z);// 6,11,16
+
+// let p=7;
+// let q=p++ + ++p + p; //7 + 9 + 9=25 
+// console.log(p,q); // 9,25
+
+// let m=3,n=5;
+// console.log(++m * n++);//4*5=20 n=5+1=6
+// console.log(m,n);//4, 6
+
+// let a=2;
+// let b= ++a + a++ + --a + a--; //3 + 3(3+1=4) + 3 + 3(3-1)=12
+// console.log(a,b);//2,12
+
+// let number=0.21;
+// if(number>0){
+//     console.log("Positive");
+// }
+// else if(number<0){
+//     console.log("Negative");
+// }
+// else if(number == 0){
+//     console.log("Zero");
+// }
+
+
+// for(let i=1;i<=10;i++){
+//  console.log(i);
+// }
+
+
+// for(let i=1;i<=10;i++){
+//     console.log(`2*${i}=${2*i}`);
+// }
+
+// let i=1;
+// while(i<=5){
+//     console.log("hello");
+//     i++;
+// }
+
+// let i=1;
+// do{
+//     console.log("sunaina");
+//     i++;
+// }
+// while(i<=5);
+
+//break
+// for(let i=1;i<=10;i++){
+//     if(i===5) break;
+//     console.log(i);
+// }
+
+// for(let i=1;i<=10;i++){
+//     if(i===9) continue;
+//     console.log(i);
+// }
+
+// Mini Practice Tasks
+
+// 1️⃣ for loop se 1 → 10 print karo.
+
+// for(let i=1;i<=10;i++){
+//     console.log(i);
+// }
+
+// 2️⃣ 5 ka table print karo.
+
+// for(let i=1;i<=10;i++){
+//     console.log(`5*${i}=${5*i}`);
+// }
+
+// 3️⃣ while loop se 10 → 1 reverse print karo.
+//  let i=10;
+//  while(i>=1){
+//     console.log(i);
+//     i--;
+//  }
+
+// 4️⃣ 1 se 20 tak sirf even numbers print karo.
+
+// for(let i=1;i<=20;i++){
+//     if(i%2===0){
+//         console.log(i);
+//     }
+// }
+
+// for(let i=1;i<=20;i++){
+//     if(i%2!==0){
+//         console.log(i); 
+//     }
+// }
+
+// 5️⃣ Ek loop banao jo break kare jab i == 7.
+
+// let i=1;
+// do{
+//     console.log(i);
+//     if(i==7) break;
+//     i++;
+// }
+// while(i<=10);
+
+</script>
+
+</body>
+</html>
