@@ -1,0 +1,176 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* background  */
+body{
+     background-image: url(https://www.azosensors.com/images/news/ImageForNews_16370_17441228063779101.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* navbar  */
+.Navbar{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%; 
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: bolder;
+    cursor:pointer;
+    font-family:cursive;
+}
+a:hover{
+    color: rgb(69, 128, 222);
+}
+
+/* home */
+#Home {
+    margin-top: 50px;
+    text-align: center;
+    font-size: larger;
+}
+
+.cards{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+.card{
+    height: 200px;
+    width: 300px;
+    margin-top: 7%;
+    background: rgba(54, 46, 46, 0.815);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    transition: all 0.5s ease-in;
+}
+.card:hover{
+    transform: scaleX(0.1);
+}
+.card img{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+.card h2, .card strong{
+    margin-top: 10px;
+}
+.btn button{
+    margin-top: 50px;
+    background-color: black;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 5px 5px 10px black;
+}
+.btn button:hover{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    text-shadow: 2px 1px 6px black;
+}
+
+/* about */
+#about{
+    margin-top: 200px;
+}
+#about, h1{
+    font-size: larger;
+}
+.merge{
+    display: flex;
+    margin: 50px 100px 100px 200px;
+    gap: 20px;
+}
+.card1{
+    height: 300px;
+    
+    margin-top: 0px;
+    padding: 10px;
+    background: rgba(54, 46, 46, 0.815);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    
+}
+.model .cards .card{
+    height:300px;
+    width: 350px;
+}
+.algorithm{
+    margin-top: 200px;
+    font-size: larger;
+}
+.algorithm table,th,td{
+    margin-top: 100px;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 260px;
+}
+.Technology{
+    margin-top: 200px;
+    font-size: larger;
+}
+.Technology ol{
+    margin-top: 100px;
+    margin-left: 520px;
+    text-align: left;
+}
+/* visualization */
+.Visual{
+    margin-top: 200px;
+    font-size: larger;
+
+}
+.Visual h2 p{
+    font-size: larger;
+}
+.Visual_image img{
+    display: inline-block;
+      height: 300px;
+      width: 400px;
+      border-radius: 5%;
+     margin: 30px;
+     margin-top: 100px;
+     transition: all 3s ease-in;
+     box-shadow: 5px 5px 5px red, -5px -5px 5px blue;
+}
+
+.Visual_image img:hover{
+    transform: scale(0.1);
+}
+/* prediction */
+.Prediction{
+    margin-top: 200px;
+    font-size: larger;
+    text-align: center;
+}
+#vedio{
+    margin-top: 100px;
+}
+

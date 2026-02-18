@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI</title>
+    <link rel="shortcut icon" href="images/AQI.png" type="image/x-icon">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="Navbar">
+        <div>
+        <img src="images/navlogo.jpg" alt="AQI LOGO">
+        </div>
+        <a >Home</a>
+        <a >About</a>
+        <a >Visualization</a>
+        <a >Prediction</a>
+    </div>
+
+    <!-- Home Section -->
+    <div id="Home">
+        <h1>India Air Quality Index Prediction</h1>
+        <p>AI-Powered PM2.5 Level Forecasting For Better Health Decisions</p>
+
+        <div class="cards">
+            <div class="card">
+            <img src="images/brain.png" alt="brainImage">
+            <h2>Random Forest</h2>
+            <strong>ML Algorithm</strong>
+            </div>
+
+            <div class="card">
+            <img src="images/good-conversion-rate.png" alt="brainImage">
+            <h2>51.83%</h2>
+            <strong>R<sup>2</sup> Score</strong>
+            </div>
+
+            <div class="card">
+            <img src="images/database-management.png" alt="brainImage">
+            <h2>Real-time</h2>
+            <strong>Prediction</strong>
+            </div>
+        </div>
+        <div class="btn">
+            <button>Make Prediction</button>
+            <button>View Analytics</button>
+        </div>
+
+        <!-- About Section -->
+         <div id="about">
+            <h1>About This</h1><br>
+            <div class="merge">
+            <p>The India Air Quality Prediction system is an advanced machine learning application designed to forecast PM2.5 (Particulate Matter 2.5) levels based on various environmental pollutants. This project uses historical air quality data from across India to train a Random Forest regression model.
+                <br><br>
+                PM2.5 refers to tiny particles in the air that are 2.5 microns or less in diameter. These particles can penetrate deep into the lungs and even enter the bloodstream, posing serious health risks.</p>
+
+                <div class="card1">
+                    <img src="images/lungs.png" alt="lungs">
+                    <h2>Health Impact</h2>
+                    <strong>PM2.5 monitoring helps protect public health</strong>
+                    </div>
+                </div>
+
+                <div class="model">
+                    <h2 style="text-decoration: underline;">Machine Learning Model</h2>
+                    <div class="cards">
+                        <div class="card">
+                        <img src="images/artificial-intelligence.png" alt="brainImage">
+                        <h2>Algorithm</h2>
+                        <strong>Random Forest Regressor</strong>
+                        <p>An ensemble learning method that operates by constructing multiple decision trees during training</p>
+                        </div>
+            
+                        <div class="card">
+                        <img src="images/self-development.png" alt="brainImage">
+                        <h2>performance</h2>
+                        <strong>R<sup>2</sup> Score 0.5183</strong>
+                        <p>RMSE:3.6039 |MAE:0.3391 <br>Cross-Validation:0.4915</p>
+                        </div>
+            
+                        <div class="card">
+                        <img src="images/puzzle.png" alt="brainImage">
+                        <h2>Features Used </h2>
+                        <strong>SO2,NO2,State,Area Type</strong>
+                        </div>
+                    </div>
+                    <div class="algorithm">
+                        <h2 style="text-decoration: underline;">Algorithm Comparison</h2>
+                          <table>
+                            <tr>
+                                <th>Model</th>
+                                <th>R <sup>2</sup> Score(Test)</th>
+                                <th>RMSE(Test)</th>
+                                <th>MAE(Test)</th>
+                                <th>Training Time(s)</th>
+                            </tr>
+                            <tr>
+                                <td><strong>Random Forest</strong></td>
+                                <td><strong>0.5183</strong></td>
+                                <td><strong>3.6039</strong></td>
+                                <td><strong>0.3391</strong></td>
+                                <td><strong>63.35</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Decision Tree</td>
+                                <td>0.4348</td>
+                                <td>3.9038</td>
+                                <td>0.3907</td>
+                                <td>1.00</td>
+                            </tr>
+                            <tr>
+                                <td>KNN</td>
+                                <td>0.3730</td>
+                                <td>4.1116</td>
+                                <td>0.3607</td>
+                                <td>21.88</td>
+                            </tr>
+                            <tr>
+                                <td>Gradient Boosting</td>
+                                <td>0.2334</td>
+                                <td>4.5465</td>
+                                <td>0.6754</td>
+                                <td>94.30</td>
+                            </tr>
+                            <tr>
+                                <td>Linear Regression</td>
+                                <td>0.0097</td>
+                                <td>5.1673</td>
+                                <td>0.7153</td>
+                                <td>0.17</td>
+                            </tr>
+                          </table>
+                          <div class="Technology">
+                        <h2 style="text-decoration: underline;">Technology Used</h2>
+                       
+                            <ol>
+                                <li>Python(Core Programming Language)</li>
+                                <li>Flask(Web FrameWork)</li>
+                                <li>Scikit-Learn(Machine Learning Library)</li>
+                                <li>Pandas(Data Processing)</li>
+                                <li>Chart.js(Data visualization)</li>
+                                <li>Html/Csss(Frontend Technology)</li>
+                            </ol>
+                        
+                    </div>
+                </div>
+         </div>
+
+         <!-- Visualization Section -->
+         <div class="Visual">
+            <h1>Data Visualization</h1><br>
+            <p>Interactive Charts and Analytics for Air Quality Data</p>
+            <div class="Visual_image">
+                <img src="https://cdn.zeebiz.com/sites/default/files/WHO-PollutedCities_0.png" alt="">
+                <img src="https://images.bhaskarassets.com/thumb/360x0/web2images/1884/2025/12/19/artboard-1-copy-4-1_1766122696.jpg" alt=""><br>
+                <img src="https://www.visualcapitalist.com/wp-content/uploads/2025/09/air-quality-worst.jpg" alt="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Sources_of_Air_Pollution.png" alt="">
+            </div>
+         </div>
+
+         <!-- Prediction Section -->
+          <div class="Prediction">
+            <h1>Prediction</h1>
+            <p>Watch the video to see how the model predicts PM2.5 levels based on input features.</p>
+            <div id="vedio"></div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QcS3ovdsgNI?si=wnBZxmW1QQh8OapT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rn9eUIbqCPU?si=8hY4bB0E3mAlkDyZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+    </div>
+
+</body>
+
+</html>
